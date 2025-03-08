@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web3/flutter_web3.dart';
+import 'package:web3dart/web3dart.dart';
+import 'package:http/http.dart';
 
 void main() {
   runApp(const ThoughtChainApp());
@@ -13,21 +14,20 @@ class ThoughtChainApp extends StatefulWidget {
 }
 
 class _ThoughtChainAppState extends State<ThoughtChainApp> {
-  String? userAddress;
+  Web3Client? _web3client;
+  String? _walletAddress;
+
+  @override
+  void initState() {
+    super.initState();
+    _web3client = Web3Client("https://goerli.infura.io/v3/YOUR_INFURA_PROJECT_ID", Client());
+  }
 
   Future<void> connectWallet() async {
-    if (ethereum != null) {
-      try {
-        final accounts = await ethereum!.requestAccount();
-        setState(() {
-          userAddress = accounts.first;
-        });
-      } catch (e) {
-        print("Fehler beim Verbinden: $e");
-      }
-    } else {
-      print("Kein Ethereum-Anbieter gefunden");
-    }
+    // Beispiel: Benutzer gibt seine Wallet-Adresse ein
+    setState(() {
+      _walletAddress = "0x123456789abcdef";  // Ersetze dies mit echter Interaktion
+    });
   }
 
   @override
@@ -36,12 +36,12 @@ class _ThoughtChainAppState extends State<ThoughtChainApp> {
       home: Scaffold(
         appBar: AppBar(title: const Text("ThoughtChain DApp")),
         body: Center(
-          child: userAddress == null
+          child: _walletAddress == null
               ? ElevatedButton(
                   onPressed: connectWallet,
-                  child: const Text("Mit MetaMask verbinden"),
+                  child: const Text("Mit Wallet verbinden"),
                 )
-              : Text("Verbunden mit: $userAddress"),
+              : Text("Verbunden mit: $_walletAddress"),
         ),
       ),
     );
