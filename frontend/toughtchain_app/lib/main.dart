@@ -3,7 +3,8 @@ import 'package:web3dart/web3dart.dart';
 import 'package:http/http.dart';
 
 void main() {
-  runApp(const ThoughtChainApp());
+  runApp(const ThoughtChainApp(
+  ));
 }
 
 class ThoughtChainApp extends StatefulWidget {
@@ -33,6 +34,7 @@ class _ThoughtChainAppState extends State<ThoughtChainApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: const Text("ThoughtChain DApp")),
         body: Center(
