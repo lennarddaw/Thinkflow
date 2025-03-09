@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "218356139445",
+    "project_id": "toughtchain",
+    "storage_bucket": "toughtchain.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218356139445:android:4ebf48e0b306d02f3dc5fc",
+        "android_client_info": {
+          "package_name": "com.example.toughtchain_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR7j6lGMUoAnddnqIMbsP4s_D6zv8zO0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
