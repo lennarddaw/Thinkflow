@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:toughtchain_app/screens/home_screen.dart';
+import 'package:toughtchain_app/auth/auth_page.dart';
 
 import 'firebase_options.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'ToughtChain',
-      home: HomeScreen(),
+      home: AuthPage(),
       debugShowCheckedModeBanner: false,
     );
   }
