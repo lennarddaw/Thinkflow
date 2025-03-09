@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:toughtchain_app/widgets/colors.dart';
 
 import '../widgets/components/sign_in_button.dart';
 import '../widgets/components/textfield.dart';
@@ -81,27 +82,28 @@ void showErrorMessage(String textmessage) {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: ColorPalette.black,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-               const SizedBox(height: 50),     
+               const SizedBox(height: 50),
             
-                //logo 
+                //logo
 
                   const SizedBox(
                   height: 10,
                   ),
 
                   const Text(
-                    'EnivroWatch',
+                    'EnviroWatch',
                     style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold
+                      color: ColorPalette.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: 'Roboto',
                     ),
                     ),
             
