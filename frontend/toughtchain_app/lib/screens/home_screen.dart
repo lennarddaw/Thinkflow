@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toughtchain_app/screens/settings.dart';
 import 'package:toughtchain_app/widgets/colors.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -47,8 +48,13 @@ class HomeScreen extends StatelessWidget {
             color: ColorPalette.white,
           ),
           const SizedBox(width: 10),
-          const CircleAvatar(
-            backgroundColor: ColorPalette.emerald,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfilePage()));
+            },
+            child: const CircleAvatar(
+              backgroundColor: ColorPalette.emerald,
+            ),
           ),
         ],
       ),
