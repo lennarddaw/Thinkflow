@@ -100,7 +100,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(height: 30),
                 // App-Name
                 const Text(
-                  'ToughtChain',
+                  'ThinkFlow',
                   style: TextStyle(
                     color: ColorPalette.white,
                     fontSize: 32,

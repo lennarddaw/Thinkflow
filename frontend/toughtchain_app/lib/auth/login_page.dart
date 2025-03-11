@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                 
                 // App-Name
                 const Text(
-                  'ToughtChain',
+                  'ThinkFlow',
                   style: TextStyle(
                     color: ColorPalette.white,
                     fontSize: 32,
